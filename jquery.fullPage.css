@@ -88,6 +88,7 @@ html, body {
     margin-top: -32px;
     top: 50%;
     opacity: 1;
+    left: 17px;
 }
 #fullPage-nav.right {
     right: 17px;

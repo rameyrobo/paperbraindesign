@@ -18,7 +18,7 @@
 			'easing': 'easeInQuart',
 			'menu': false,
 			'navigation': false,
-			'navigationPosition': 'right',
+			'navigationPosition': 'none',
 			'navigationColor': '#000',
 			'navigationTooltips': [],
 			'slidesNavigation': false,
