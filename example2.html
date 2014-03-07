@@ -12,15 +12,17 @@
 	
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="example2.css" />
+	<link rel="stylesheet" type="text/css" href="callback.css" />
 
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
 		</script>
 	<![endif]-->
-		
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.imageScroll.js"></script>
 	
 	<script type="text/javascript" src="jquery.fullPage.js"></script>
 	<script type="text/javascript">
@@ -28,10 +30,40 @@
 			var pepe = $.fn.fullpage({
 				slidesColor: ['#ffffff', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-				menu: '#menu'
+				menu: '#menu',
+				afterLoad: function(anchorLink, index, intro){
+					//section 3
+					if(index == 1){
+						//moving the image
+						$('#section0').find('img').delay(500).animate({
+							left: '0%'
+						}, 1500, 'easeOutExpo');
+					}
+					//section 2
+					if(index == 2){
+						//moving the image
+						$('#section1').find('img').delay(500).animate({
+							left: '0%'
+						}, 1500, 'easeOutExpo');
+						
+						$('#section1').find('p').first().fadeIn(1800, function(){
+							$('#section1').find('p').last().fadeIn(1800);
+						});;
+						
+					}
+					
+					//section 3
+					if(anchorLink == '4thpage'){
+						//moving the image
+						$('#section3').find('p').delay(500).animate({
+							left: '0%'
+						}, 1500, 'easeOutExpo');
+					}
+				}
 			});
 			
 		});
+
 	</script>
 
 </head>
@@ -48,8 +80,8 @@
 	<li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
 </ul>
 
-<div class="section " id="section0">
-	<h1>Paper Brain Design</h1>
+<div class="section" id="section0">
+	<h1>Media Origami</h1>
 	<p>A couple of Ho Hum Nutbags, without the nuts</p>
 	<img src="imgs/paperbrain.png" alt="fullPage" />
 </div>

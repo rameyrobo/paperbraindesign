@@ -74,7 +74,7 @@ p{
 	text-align:center;
 }
 #menu li {
-	display:inline-block;
+	width: 90px;
 	margin: 10px;
 	color: #000;
 	background:#fff;
@@ -115,7 +115,11 @@ p{
 	padding: 0;
 	margin:0;
 }
-#section0 img,
+#section0 {
+	background-image: url(imgs/paperback.jpg);
+	background-size: 100%
+
+}
 #section1 img{
 	margin: 20px 0 0 0;
 }	

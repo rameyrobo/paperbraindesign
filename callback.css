@@ -1,0 +1,15 @@
+#section0 img{
+	left: 130%;
+	position:relative;
+}
+#section1 img{
+	left: 130%;
+	position:relative;
+}
+#section1 p{
+	visibility:visible;
+}
+#section3 p{
+	left: -130%;
+	position:relative;
+}
